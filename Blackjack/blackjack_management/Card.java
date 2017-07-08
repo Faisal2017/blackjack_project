@@ -2,19 +2,19 @@ package blackjack_management;
 
 public class Card {
 
-  RankType rank;
-  SuitType suit;
+  private Rank rank;
+  private Suit suit;
 
-  public Card(RankType rank, SuitType suit) {
+  public Card(Rank rank, Suit suit) {
     this.rank = rank;
     this.suit = suit;
   }
 
-  public RankType getRank() {
+  public Rank getRank() {
     return this.rank;
   }
 
-  public SuitType getSuit() {
+  public Suit getSuit() {
     return this.suit;
   }
 
