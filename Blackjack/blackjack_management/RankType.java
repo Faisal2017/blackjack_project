@@ -1,9 +1,9 @@
 package blackjack_management;
 
 public enum RankType {
-  
+
   ACE,
-  Two, 
+  TWO, 
   THREE,
   FOUR, 
   FIVE, 
