@@ -3,18 +3,29 @@ import java.util.ArrayList;
 
 public class Deck {
 
-  private Card card;
   private ArrayList<Card> deck;
-
 
   public Deck() {
     this.deck = new ArrayList<Card>();
-
-    for (Suit suit : Suit.values())
-      for (Rank rank : Rank.values())
-
-        deck.add(new Card(rank, suit));
+    this.setUpDeck();
   }
+
+  public int cardCount() {
+    return this.deck.size();
+  }
+
+  public void setUpDeck() {
+    this.deck = new ArrayList<Card>();
+
+    for (Rank rank : Rank.values()){
+      for (Suit suit : Suit.values()){
+
+        Card card = new Card(rank, suit);
+        deck.add(card);
+      }
+    }
+  }
+
 
 
 
@@ -24,7 +35,7 @@ public class Deck {
   // public void setUpDeck() {
 
   //     Enum[] cardsToAdd = {
-            
+
   //       for (Card card : card.getRank()) {
   //         Enum.add(card);
   //       }

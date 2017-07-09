@@ -18,4 +18,10 @@ public class Card {
     return this.suit;
   }
 
+  // public String toString() {
+  //   String card = "";
+  //   card += rank.getRank() + suit.getSuit();
+  //   return card;
+  // }
+
 }

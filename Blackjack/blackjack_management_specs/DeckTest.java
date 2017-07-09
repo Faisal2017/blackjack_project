@@ -5,16 +5,15 @@ import blackjack_management.*;
 
 public class DeckTest {
 
-  // private Card card;
-  private ArrayList<Card> deck;
+  private Deck deck;
 
-  // @Before
-  // public void before() {
-  //   card = new Card
-  // }
+  @Before
+  public void before() {
+    deck = new Deck(); 
+  }
 
   @Test
   public void testDeckNumbers() {
-    assertEquals(52, deck);
+    assertEquals(52, deck.cardCount());
   }
 }
