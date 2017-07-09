@@ -16,4 +16,11 @@ public class DeckTest {
   public void testDeckNumbers() {
     assertEquals(52, deck.cardCount());
   }
+
+  @Test
+  public void testDeckShuffle() {
+    deck.shuffle();
+    assertNotNull(deck.getCard());
+  }
+
 }

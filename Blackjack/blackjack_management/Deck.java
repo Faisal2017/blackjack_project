@@ -1,5 +1,6 @@
 package blackjack_management;
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class Deck {
 
@@ -26,40 +27,12 @@ public class Deck {
     }
   }
 
+  public void shuffle() {
+     Collections.shuffle(deck);
+  }
 
+  public Card getCard() {
+    return deck.get(0);
+  }
 
-
-  // public void createDeck() {
-
-
-  // public void setUpDeck() {
-
-  //     Enum[] cardsToAdd = {
-
-  //       for (Card card : card.getRank()) {
-  //         Enum.add(card);
-  //       }
-
-  //       for (Card card : card.getSuit()) {
-  //         Enum.add(card);
-  //       }
-
-  // }
-
-
-
-
-  // private void setUpAnswers() {
-
-  //     String[] answersToAdd = {
-  //             "The Stars Have Not Yet Spoken",
-  //             "More Tea Leaves Required",
-  //             "I Wouldn't Bet On it",
-  //             "The Answer You Seek Is Behind You"
-  //     };
-
-  //     for (String answer : answersToAdd) {
-  //         this.answers.add(answer);
-  //     }
-  // }
 }
