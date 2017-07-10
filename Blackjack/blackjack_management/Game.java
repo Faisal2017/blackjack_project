@@ -25,6 +25,10 @@ public class Game {
     cardRules.put(Rank.JACK, 10);
   }
   
-
+  public void dealCardFromDeck(Player player) {
+    dealtCard = deck.get(0);
+    deck.remove(0);
+    return player.add(dealtCard);
+  }
 
 }
