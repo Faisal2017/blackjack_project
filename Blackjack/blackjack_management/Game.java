@@ -6,11 +6,12 @@ public class Game {
 
   private Deck deck;
   private Player player;
+  private HashMap<Enum, Integer> cardRules;
 
   public Game() {
-    deck = new Deck();
+    this.deck = new Deck();
     //deck.shuffle();
-    HashMap<Enum, Integer> cardRules = new HashMap<Enum, Integer>();
+    cardRules = new HashMap<Enum, Integer>();
     
     cardRules.put(Rank.ACE, 1);
     cardRules.put(Rank.TWO, 2);
@@ -26,6 +27,10 @@ public class Game {
     cardRules.put(Rank.QUEEN, 10);
     cardRules.put(Rank.JACK, 10);
   }
+
+  public Integer checkValue(Card card){
+    return cardRules.get(card.getRank());
+  }
   
   public void dealCardFromDeck(Player player) {
     Card dealtCard = deck.getCard();
@@ -33,6 +38,6 @@ public class Game {
     player.addCardToHand(dealtCard);
   }
 
-  
+
 
 }

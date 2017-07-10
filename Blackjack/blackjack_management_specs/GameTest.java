@@ -34,9 +34,16 @@ public class GameTest {
   @Test
   public void playerRecievesAceOfHeartsCard() {
     game.dealCardFromDeck(player1);
-    assertEquals("ACE", player1.getHand().get(0).getRank().toString());
+    assertEquals("ACE OF HEARTS", player1.getHand().get(0).toString());
   }  
 
+  @Test
+  public void hasValue() {
+    game.dealCardFromDeck(player1);
+    Card card = player1.getHand().get(0);
+    int result = game.checkValue(card);
+    assertEquals(1, result);
+  }
   
 
 }
