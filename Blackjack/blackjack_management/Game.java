@@ -53,5 +53,19 @@ public class Game {
     player.addCardToHand(dealtCard);
   }
 
+  public Player compareHands() {
+    int counter = 0;
+    Player winner = players.get(0);
+
+    for (Player player : players) {
+      int handValue = checkValue(player.getHand()); 
+      if  (handValue > counter && handValue <= 21) {
+        counter = handValue;
+        winner = player;
+      }
+    }
+
+    return winner;
+  }
 
 }
