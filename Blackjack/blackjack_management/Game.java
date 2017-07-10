@@ -28,8 +28,18 @@ public class Game {
     cardRules.put(Rank.JACK, 10);
   }
 
-  public Integer checkValue(Card card){
-    return cardRules.get(card.getRank());
+  // public int checkValue(Card card){
+  //   return cardRules.get(card.getRank());
+  // }
+
+  public int checkValue(ArrayList<Card> hand) {
+    int valueOfCards = 0;
+
+    for (Card card : hand) {
+      valueOfCards += cardRules.get(card.getRank());
+    }
+
+    return valueOfCards;
   }
   
   public void dealCardFromDeck(Player player) {

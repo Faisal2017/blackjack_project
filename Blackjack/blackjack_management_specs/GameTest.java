@@ -38,12 +38,21 @@ public class GameTest {
   }  
 
   @Test
-  public void hasValue() {
+  public void playersCardhasValue() {
     game.dealCardFromDeck(player1);
-    Card card = player1.getHand().get(0);
+    ArrayList<Card> card = player1.getHand();
     int result = game.checkValue(card);
     assertEquals(1, result);
   }
   
+  @Test
+  public void playersHandHasValue() {
+    game.dealCardFromDeck(player1);
+    game.dealCardFromDeck(player1);
+    game.dealCardFromDeck(player1);
+    ArrayList<Card> cards = player1.getHand();
+    int result = game.checkValue(cards);
+    assertEquals(3, result);
+  }
 
 }

@@ -18,6 +18,7 @@ public class Deck {
       for (Suit suit : Suit.values()){
 
         Card card = new Card(rank, suit);
+        // System.out.println(card);
         deck.add(card);
       }
     }
@@ -34,7 +35,7 @@ public class Deck {
   public void removeCard(int index) {
     this.deck.remove(index);
   }
-  
+
   public Card getCard() {
     return deck.get(0);
   }
