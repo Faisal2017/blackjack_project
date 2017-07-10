@@ -10,8 +10,8 @@ public class GameTest {
   private Card card2;
   private Card card3;
   private Card card4;
-  Player player1;
-  Player player2;
+  private Player player1;
+  private Player player2;
 
 
   @Before
@@ -23,6 +23,8 @@ public class GameTest {
     player1 = new Player("Player One");
     player2 = new Player("Player Two");
     game = new Game();
+    game.addPlayer(player1);
+    game.addPlayer(player2);
   }
 
   @Test
@@ -40,8 +42,8 @@ public class GameTest {
   @Test
   public void playersCardhasValue() {
     game.dealCardFromDeck(player1);
-    ArrayList<Card> card = player1.getHand();
-    int result = game.checkValue(card);
+    ArrayList<Card> hand = player1.getHand();
+    int result = game.checkValue(hand);
     assertEquals(1, result);
   }
   
@@ -57,14 +59,12 @@ public class GameTest {
 
   //note player has been given specific cards directly in below test
   @Test
-  public void comparePlayerHands(player1, player2) {
+  public void comparePlayerHands() {
     player1.addCardToHand(card1);
     player1.addCardToHand(card2);
     player2.addCardToHand(card3);
     player2.addCardToHand(card4);
-    player1.checkValue(hand);
-    player2.checkValue(hand);
-    assertEquals("Player One wins", game.compareHands(player1, player2));
+    assertEquals(player1, game.compareHands());
   }
 
 }

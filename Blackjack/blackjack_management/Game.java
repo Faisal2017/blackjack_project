@@ -5,11 +5,12 @@ import java.util.HashMap;
 public class Game {
 
   private Deck deck;
-  private Player player;
+  private ArrayList<Player> players;
   private HashMap<Enum, Integer> cardRules;
 
   public Game() {
     this.deck = new Deck();
+    this.players = new ArrayList<Player>();
     //deck.shuffle();
     cardRules = new HashMap<Enum, Integer>();
     
@@ -32,6 +33,10 @@ public class Game {
   //   return cardRules.get(card.getRank());
   // }
 
+  public void addPlayer(Player player) {
+    this.players.add(player);
+  }
+
   public int checkValue(ArrayList<Card> hand) {
     int valueOfCards = 0;
 
@@ -48,5 +53,5 @@ public class Game {
     player.addCardToHand(dealtCard);
   }
 
-  
+
 }

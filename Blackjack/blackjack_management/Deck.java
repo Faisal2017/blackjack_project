@@ -14,8 +14,8 @@ public class Deck {
   public void setUpDeck() {
     this.deck = new ArrayList<Card>();
 
-    for (Rank rank : Rank.values()){
-      for (Suit suit : Suit.values()){
+    for (Rank rank : Rank.values()) {
+      for (Suit suit : Suit.values()) {
 
         Card card = new Card(rank, suit);
         // System.out.println(card);
