@@ -34,7 +34,7 @@ public class GameTest {
   @Test
   public void playerRecievesAceOfHeartsCard() {
     game.dealCardFromDeck(player1);
-    assertEquals(Rank.ACE, player1.getHand().get(0).getRank());
+    assertEquals("ACE", player1.getHand().get(0).getRank().toString());
   }  
 
   

@@ -18,4 +18,9 @@ public class Card {
     return this.suit;
   }
 
+  @Override
+  public String toString() {
+    return this.rank.toString() + "of" + this.suit.toString();
+  }
+
 }

@@ -11,14 +11,6 @@ public class Deck {
     this.setUpDeck();
   }
 
-  public int cardCount() {
-    return this.deck.size();
-  }
-
-  public void removeCard(int index) {
-    this.deck.remove(index);
-  }
-
   public void setUpDeck() {
     this.deck = new ArrayList<Card>();
 
@@ -35,6 +27,14 @@ public class Deck {
     Collections.shuffle(deck);
   }
 
+  public int cardCount() {
+    return this.deck.size();
+  }
+
+  public void removeCard(int index) {
+    this.deck.remove(index);
+  }
+  
   public Card getCard() {
     return deck.get(0);
   }
