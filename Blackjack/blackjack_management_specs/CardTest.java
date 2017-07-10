@@ -20,4 +20,9 @@ public class CardTest {
   public void canGetSuit() {
     assertEquals(Suit.CLUBS, card.getSuit());
   }
+
+  @Test
+  public void canReturnString() {
+    assertEquals("KING OF CLUBS", card.toString());
+  }
 }

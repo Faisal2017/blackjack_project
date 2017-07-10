@@ -47,12 +47,14 @@ public class GameTest {
   
   @Test
   public void playersHandHasValue() {
-    game.dealCardFromDeck(player1);
-    game.dealCardFromDeck(player1);
-    game.dealCardFromDeck(player1);
-    ArrayList<Card> cards = player1.getHand();
+    game.dealCardFromDeck(player2);
+    game.dealCardFromDeck(player2);
+    game.dealCardFromDeck(player2);
+    ArrayList<Card> cards = player2.getHand();
     int result = game.checkValue(cards);
     assertEquals(3, result);
   }
+
+  
 
 }
