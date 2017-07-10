@@ -11,7 +11,7 @@ public class Game {
   public Game() {
     this.deck = new Deck();
     this.players = new ArrayList<Player>();
-    //deck.shuffle();
+    System.out.println(deck);
     cardRules = new HashMap<Enum, Integer>();
     
     cardRules.put(Rank.ACE, 1);
@@ -55,7 +55,7 @@ public class Game {
 
   public Player compareHands() {
     int counter = 0;
-    Player winner = players.get(0);
+    Player winner = null;
 
     for (Player player : players) {
       int handValue = checkValue(player.getHand()); 
