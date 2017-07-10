@@ -24,8 +24,13 @@ public class DeckTest {
   }
 
   @Test
-  public void testFirstCard() {
+  public void testFirstCardRank() {
     assertEquals(Rank.ACE, deck.getCard().getRank());
+  }
+
+  @Test
+  public void testFirstCardSuit() {
+    assertEquals(Suit.HEARTS, deck.getCard().getSuit());
   }
 
 }
