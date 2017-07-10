@@ -23,4 +23,9 @@ public class DeckTest {
     assertNotNull(deck.getCard());
   }
 
+  @Test
+  public void testFirstCard() {
+    assertEquals(Rank.ACE, deck.getCard().getRank());
+  }
+
 }
