@@ -8,6 +8,8 @@ public class Game {
   private Player player;
 
   public Game() {
+    deck = new Deck();
+    //deck.shuffle();
     HashMap<Enum, Integer> cardRules = new HashMap<Enum, Integer>();
     
     cardRules.put(Rank.ACE, 1);
@@ -25,10 +27,10 @@ public class Game {
     cardRules.put(Rank.JACK, 10);
   }
   
-  // public void dealCardFromDeck(Player player) {
-  //   Card dealtCard = deck.get(0);
-  //   // deck.remove(0);
-  //   player.this.hand.add(dealtCard);
-  // }
+  public void dealCardFromDeck(Player player) {
+    Card dealtCard = deck.getCard();
+    deck.removeCard(0);
+    player.addCardToHand(dealtCard);
+  }
 
 }

@@ -8,9 +8,14 @@ public class Player {
 
   public Player(String name) {
     this.name = name;
-    this.hand = hand;
+    this.hand = new ArrayList<Card>();
   }
 
+  public void addCardToHand(Card card) {
+    this.hand.add(card);
+  }
 
-
+  public ArrayList<Card> getHand() {
+    return new ArrayList<Card>(hand);
+  }
 }
