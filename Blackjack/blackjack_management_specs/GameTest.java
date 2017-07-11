@@ -64,7 +64,7 @@ public class GameTest {
     player1.addCardToHand(card2);
     player2.addCardToHand(card3);
     player2.addCardToHand(card4);
-    assertEquals(player1, game.compareHands());
+    assertEquals("Draw", game.compareHands());
   }
 
 }
